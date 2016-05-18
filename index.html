@@ -15,7 +15,7 @@
 <body style="display: none;">
 <!-- Dropdown Trigger -->
 
-  <div class="png"><img src="./images/bg.png"></div>
+  <!-- <div class="png"><img src="./images/bg.png"></div> -->
   <div class="nav">
   <div class="fixed">
   <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
@@ -29,10 +29,9 @@
   </div>
   </div>
 
-
-
-<div class="intro grey darken-4 lighten-2 z-depth-1"><h1 class="grey-text text-lighten-5">DEVANTE NOTOPAWIRO</h1>
-        
+<!-- <div class="intro grey darken-4 lighten-2 z-depth-1"><h1 class="grey-text text-lighten-5">DEVANTE NOTOPAWIRO</h1>
+        </div>
+         -->
  <div class="slider">
     <ul class="slides">
       <li>
@@ -65,18 +64,8 @@
       </li>
     </ul>
   </div>
-      
-
-<div class="content">
-<video id="bg" src="./images/HKU.mp4" autoplay="true" loop="true" muted="true">
-</div>
-
-<h5 class="grey darken-4 white-text text-darken-1">FREE YOUR MIND</h5>
-
-       
-      </video> </div>
-
- <div class="container about">
+  
+      <div class="container about">
         <h5>about me</h5>
         <h6>let me introduce my self</h6>
         <hr>
@@ -129,6 +118,8 @@
         <hr>
         <div class="row">
           <div class="col s12 m12 l12 portfolio-holder">
+            <video class="materialboxed" src="./images/SCRUM.mp4" loop="true" controls="false"><source type="video/mp4"></video>
+            <video class="materialboxed" src="./images/ID.mp4" loop="true" controls><source type="video/mp4"></video>
             <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
             <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
             <img class="materialboxed" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
@@ -180,30 +171,39 @@
         </div>
       </div>
       
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
 <script>
   $(document) .ready (function (){
     console.log ('document is loaded bro')
      $ ('body') .fadeIn(5000)
 
-  })
-
 //   $(document).scroll(function(){
 //     $("img").slideUp(1000);
 // })
 
-    // $(document).ready(function(){
-    //   $('.slider').slider({full_width: true});
-    // });
 
-    $(document).ready(function(){               
+      $('.slider').slider({full_width: true});
+ 
+  $('.materialboxed').materialbox();
   $('.materialboxed').materialbox();
 });
-$(document).ready(function(){
-  $('.materialboxed').materialbox();
+
+$("video").click(function() {
+  //console.log(this); 
+  if (this.paused) {
+    this.play();
+  } else {
+    this.pause();
+  }
 });
-        
+
+
 
 function PopIt() { return "ARE YOU SURE YOU WANT TO LEAVE YOUR JAILTIME?"; }
      function UnPopIt()  { /* nothing to return */ } 
